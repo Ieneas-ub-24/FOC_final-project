@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            text-align: center; /* Center text for the entire body */
+        }
+
+        header {
+            background-color: #0d0d0d;
+            padding: 20px;
+            border-bottom: 2px solid #00ffcc;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Align navigation items horizontally */
+            justify-content: center;
+            margin-bottom: 20px; /* Space below navigation */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        article {
+            display: flex; /* Use flexbox for centering */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            margin: 20px auto;
+            max-width: 960px; /* Max width for the article */
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            padding: 10px;
+            background-color: #0d0d0d;
+            border-top: 2px solid #00ffcc;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        img {
+            width: 100%; /* Make the image responsive */
+            max-width: 600px; /* Limit maximum width */
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
+
+        /* Fade-in effect for the iframe */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2><b>Fundamentals of Computing</b></h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Course</a></li>
+            <li><a href="project.html">Project</a></li>
+            <li><a href="concepts.html">Concepts</a></li>
+            <li><a href="database.html">Databases</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="aboutme.html">Dev Team</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <iframe id="presentation" class="fade-in" src="https://docs.google.com/presentation/d/e/2PACX-1vTGsDsZjcd-o4TUuy537ew_PEQCVNZ9xbt8geTZLKmH5u7mdnFvmsENm1QF4aXnAgfqLWeXLFQQM9EL/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" style="margin-top: 20px;"></iframe>
+    </article>
+</section>
+
+<footer>
+    <p>@ Powered by UB</p>
+</footer>
+
+<script>
+    // JavaScript to add fade-in effect
+    window.onload = function() {
+        const iframe = document.getElementById('presentation');
+        iframe.classList.add('show');
+    };
+</script>
+
+</body>
+</html>
